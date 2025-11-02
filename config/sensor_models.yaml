@@ -1,0 +1,21 @@
+sensor_models:
+  perfect:
+    detection_error_rate: 0.0
+    false_positive_rate: 0.0
+    distance_noise_std: 0.0
+    velocity_noise_std: 0.0
+    latency: 0.0
+
+  realistic:
+    detection_error_rate: 0.02
+    false_positive_rate: 0.01
+    distance_noise_std: 0.5
+    velocity_noise_std: 1.0
+    latency: 0.1
+
+  degraded:
+    detection_error_rate: 0.10
+    false_positive_rate: 0.03
+    distance_noise_std: 2.0
+    velocity_noise_std: 2.5
+    latency: 0.15

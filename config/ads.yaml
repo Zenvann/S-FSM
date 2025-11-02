@@ -1,0 +1,106 @@
+ads_designs:
+  acc_only:
+    sae_level: 1
+    functions:
+      longitudinal_control: true
+      lateral_control: false
+      lane_change: false
+      overtaking: false
+    sensors:
+      longitudinal_radar:
+        type: "Long Range Radar"
+        range: 150
+        field_of_view: 18
+        detection_accuracy:
+          distance: 0.5
+          velocity: 1.0
+        detection_probability: 0.98
+        update_rate: 20
+    tactical_params:
+      target_velocity: 33.3  # m/s (120 km/h)
+      time_headway: 1.4 
+      min_gap: 15.0
+      emergency_ttc: 1.0
+      max_acceleration: 2.5  
+      max_deceleration: -4.0 
+
+  lka_acc:
+    sae_level: 2
+    functions:
+      longitudinal_control: true
+      lateral_control: true
+      lane_change: false
+      overtaking: false
+    sensors:
+      longitudinal_radar:
+        type: "Long Range Radar"
+        range: 150
+        field_of_view: 18
+        detection_accuracy:
+          distance: 0.5
+          velocity: 1.0
+        detection_probability: 0.98
+        update_rate: 20
+      front_camera:
+        type: "Monocular Camera"
+        range: 100
+        field_of_view: 52
+        lane_detection_accuracy: 0.1
+        detection_probability: 0.95
+        update_rate: 30
+    tactical_params:
+      target_velocity: 33.3
+      time_headway: 1.5
+      min_gap: 15.0  
+      emergency_ttc: 1.2 
+      lane_center_tolerance: 0.3
+      max_lateral_acceleration: 2.0
+      min_lane_confidence: 0.6
+
+  highway_pilot:
+    sae_level: 2
+    functions:
+      longitudinal_control: true
+      lateral_control: true
+      lane_change: true
+      overtaking: true
+    sensors:
+      longitudinal_radar:
+        type: "Long Range Radar"
+        range: 150
+        field_of_view: 18
+        detection_accuracy:
+          distance: 0.5
+          velocity: 1.0
+        detection_probability: 0.98
+        update_rate: 20
+      front_camera:
+        type: "Monocular Camera"
+        range: 100
+        field_of_view: 52
+        lane_detection_accuracy: 0.1
+        detection_probability: 0.95
+        update_rate: 30
+      corner_radars:
+        type: "Short Range Radar"
+        count: 4
+        range: 80
+        field_of_view: 150
+        detection_accuracy:
+          distance: 1.0
+          velocity: 1.5
+        detection_probability: 0.92
+        update_rate: 20
+    tactical_params:
+      target_velocity: 33.3
+      time_headway: 1.3 
+      min_gap: 12.0         
+      emergency_ttc: 1.0     
+      min_gap_for_lane_change: 18.0
+      safe_gap_front: 12.0
+      safe_gap_rear: 8.0
+      lane_change_duration: 4.0
+      velocity_delta_threshold: -2.0 
+      min_following_time_before_overtake: 3.0
+      abort_if_ttc_during_lc: 2.0
+      abort_if_gap_shrinks_by: 8.0
