@@ -18,9 +18,16 @@ ads_designs:
         update_rate: 20
     tactical_params:
       target_velocity: 33.3  # m/s (120 km/h)
-      time_headway: 1.4 
-      min_gap: 15.0
-      emergency_ttc: 1.0
+      time_headway: 1.6 
+      min_gap: 25.0
+
+      comforable_distance_ratio: 1.3 # comfortable distance = 1.2 * safe distance
+      warning_distance_ratio: 0.80 # warning distance = 0.85 * safe distance
+
+      emergency_ttc: 2.0
+      critical_ttx: 1.2
+      warning_ttc: 3.5
+
       max_acceleration: 2.5  
       max_deceleration: -4.0 
 

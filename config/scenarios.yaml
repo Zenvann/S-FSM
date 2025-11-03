@@ -1,7 +1,7 @@
 scenarios:
   highway_fast_low:
     environment: "highway-v0"
-    duration: 600
+    duration: 300
     traffic_density: "low"
     vehicle_count: 10
 
@@ -13,7 +13,7 @@ scenarios:
 
   highway_fast_medium:
     environment: "highway-v0"
-    duration: 600
+    duration: 300
     traffic_density: "medium"
     vehicle_count: 20
     
@@ -25,7 +25,7 @@ scenarios:
 
   highway_fast_high:
     environment: "highway-v0"
-    duration: 600
+    duration: 300
     traffic_density: "high"
     vehicle_count: 30
 
@@ -37,13 +37,13 @@ scenarios:
   
   highway_urban_medium:
     environment: "highway-v0"
-    duration: 600
+    duration: 300
     traffic_density: "medium"
     vehicle_count: 25
     
     env_params:
       lanes_count: 3       
-      policy_frequency: 2   
+      policy_frequency: 1   
       simulation_frequency: 15
       lane_width: 3.5       
   
